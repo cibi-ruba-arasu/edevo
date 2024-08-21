@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<style>
+    .top{
+        background-color:black;
+        width: auto;
+        height: 50px;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+    .dbtn{
+        margin-top: 15px;
+        margin-left: 15px;
+        border: solid;
+        border-color: white;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        border-width: 2px;
+        height: 30px;
+        width: 80px;
+    }
+    .dbtn:hover{
+        background-color: white;
+        cursor: pointer;
+        color: black;
+        transition-duration: 0.6s;
+    }
+    .tit{
+        display: inline-block;
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        padding-bottom: 20px;
+        margin-left: 400px;
+    }
+    .tb{
+        height: 800px;
+        width: 300px;
+        border-style: solid;
+        visibility: hidden;
+        display: inline;
+        background-color: gray;
+        z-index: 100;
+    }
+    @keyframes an{
+        0%{
+           transform: translateX(-300px);   
+           opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    .tb-vis{
+        visibility: visible;
+        animation: an ;
+        animation-duration: 1s;
+        display: inline-block;
+    }
+    .btn{
+        width: 300px;
+        height: 70px;
+        background-color: gray;
+        border-left: 0;
+        border-right: 0;
+        border-top: solid;
+        border-bottom: solid;
+        border-color:rgb(139, 139, 139);
+        border-width: 1px;
+    }
+    .btn:hover{
+        cursor: pointer;
+        border-color: white;
+        transition-duration: 0.6s;
+        color: white;
+    }
+    .main{
+        margin-left: 40px;
+        margin-top: 30px;
+        border: solid;
+        height: 400px;
+        width: 250px;
+        display: inline-block;
+        background-color: white;
+        border-radius: 20px;
+    }
+    .imgd{
+        height: 150px;
+        width: 200px;
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+    .mt{
+        font-weight: bolder;
+        text-align: center;
+    }
+    .ma{
+        text-align: center;
+    }
+    .mr{
+        font-weight: bolder;
+        text-align: center;
+    }
+    .mb{
+        background-color: white;
+        height: 50px;
+        width: 100px;
+        margin-left: 75px;
+        border: solid;
+        border-radius: 10px;
+    }
+    .mb:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transition-duration: 0.6s;
+    }
+    .sp{
+        color: green;
+    }
+    body{
+        background-color: dimgrey;
+    }
+</style>
+<html>
+    <head>
+        <title>EdEvo-Homepage</title>
+    </head>
+    <body>
+        <div class="top">
+            <button class="dbtn" onclick="imp();">Dashboard</button>
+            <button class="dbtn" onclick="window.location.href = 'edevo-upload.html'">Upload</button>
+            <p class="tit">EdEvo.com</p>
+            <button class="dbtn" style="margin-left: 430px;" onclick="window.location.href = 'edevo-profile.html'">Profile</button>
+        </div>
+        <div class="tb">
+            <button class="btn">Enrolled Courses</button>
+            <button class="btn">Certificates</button>
+            <button class="btn">Schedule</button>
+        </div>
+        <div class="p">
+            
+        </div>
+        <div class="main">
+            <img src="linear_reg.jpeg" class="imgd">
+            <p class="mt">Linear Regression</p>
+            <p class="ma">course by : Post Malone</p>
+            <p class="mr">Rating : 4.5/5</p>
+            <button class="mb" onclick="window.location.href = 'edevo-course.html'">Enroll for free</button>
+        </div>
+        <div class="main">
+            <img src="drone.jpeg" class="imgd">
+            <p class="mt">Starting with drones</p>
+            <p class="ma">course by : Umaya Rajkumar</p>
+            <p class="mr">Rating : 4.2/5</p>
+            <button class="mb">Enroll for <span class="sp">$19.99</span></button>
+        </div>
+        <div class="main">
+            <img src="rocket.jpeg" class="imgd">
+            <p class="mt">Amateur Rocketry</p>
+            <p class="ma">course by : TKOR</p>
+            <p class="mr">Rating : 4.5/5</p>
+            <button class="mb">Enroll for <span class="sp">$69.69</span></button>
+        </div>
+        <div class="main">
+            <img src="cine.jpeg" class="imgd">
+            <p class="mt">Art of Cinematography</p>
+            <p class="ma">course by : Quentin Tarantino</p>
+            <p class="mr">Rating : 4.2/5</p>
+            <button class="mb">Enroll for <span class="sp">$12.99</span></button>
+        </div>
+        <div class="main">
+            <img src="stock.jpeg" class="imgd">
+            <p class="mt">Predict stocks - The right way</p>
+            <p class="ma">course by : Jordan Belfort</p>
+            <p class="mr">Rating : 4.0/5</p>
+            <button class="mb">Enroll for <span class="sp">$29.99</span></button>
+        </div>
+        <div class="main">
+            <img src="iot.jpeg" class="imgd">
+            <p class="mt">Everything about IOT</p>
+            <p class="ma">course by : Pranav</p>
+            <p class="mr">Rating : 4.7/5</p>
+            <button class="mb">Enroll for free</button>
+        </div>
+        
+        
+    </body>
+</html>
+<script>
+    let cc=0;
+    function imp()
+    {
+        let hu= document.querySelector('.tb');
+        cc=cc+1
+        if(cc%2!=0){
+            hu.classList.add('tb-vis');
+        }
+        else{
+            hu.classList.remove('tb-vis');
+        }
+    }
+</script>

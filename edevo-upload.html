@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<style>
+    .btn{
+        display: inline-block;
+        height: 500px;
+        width: 500px;
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    .btn:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-weight: bolder;
+        transition-duration: 1s;
+    }
+    .tit{
+        margin: 0;
+        background-color: black;
+        font-size: 70px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+<html>
+    <head>
+        <title>edevo-upload</title>
+    </head>
+    <body>
+        <p class="tit">Upload Page</p>
+        <button class="btn" style="margin-left: 150px;" onclick="window.location.href = 'edevo-user-upload.html'">
+            Upload as an indie user
+        </button>
+        <button class="btn" style="margin-left: 20px;" onclick="window.location.href = 'edevo-teacher-login.html'">
+            Upload as a teacher
+        </button>
+    </body>
+</html>
